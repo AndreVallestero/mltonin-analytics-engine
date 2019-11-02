@@ -1,2 +1,2 @@
-# mltonin-imaging
-Generates images for mltonin machine learning
+# mltonin-analytics-engine
+Generates, analyzes and process images for MLTonin
