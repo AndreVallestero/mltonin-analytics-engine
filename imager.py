@@ -16,7 +16,6 @@ class Imager:
         faces, confidences = cvlib.detect_face(img)
 
         if not len(confidences):
-            print('No face found')
             return None
         
         faceCrop = faces[confidences.index(max(confidences))]
@@ -62,7 +61,8 @@ class Imager:
         faceCrop = [int(dimension) for dimension in faceCrop]        
         img = img[faceCrop[1]:faceCrop[3], faceCrop[0]:faceCrop[2]]
         #img = cv2.resize(img, (128, 128))
-        img = cv2.resize(img, (96, 128))
+        #img = cv2.resize(img, (96, 128))
+        img = cv2.resize(img, (192, 256))
         img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
         return img
 

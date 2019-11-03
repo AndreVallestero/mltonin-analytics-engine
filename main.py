@@ -5,7 +5,7 @@ def main():
     myImager = Imager()
     #myModel = Model()
     while True: 
-        img = myImager.get_img()
+        img = myImager.process_img(myImager.capture_img())
         if not img is None:
             myImager.show_img(img)
             #result = myModel.process(img)
